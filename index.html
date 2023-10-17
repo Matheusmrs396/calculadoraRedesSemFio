@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <!-- Incluindo o Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#shannon">Shannon</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#nyquist">Nyquist</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#mW_para_dBm"> mW para dBm</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#dBm_para_mW" tabindex="-1" aria-disabled="true"> dBm para mW</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#eirp" tabindex="-1" aria-disabled="true"> EIRP</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#fslp" tabindex="-1" aria-disabled="true"> FSLP</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#rsl" tabindex="-1" aria-disabled="true">RSL </a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#fresnel" tabindex="-1" aria-disabled="true"> Fresnel Zone</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="page">
+
+        <div class="" id="shannon">
+            <p>shannon</p>
+            <div class="">
+                <label for="banda_shannon" class="form-label">Largura de Banda(Hz)</label>
+                <input type="number" class="form-control" id="banda_shannon" placeholder="Informe o valor em Hz">
+            </div>
+            <div class="">
+                <label for="sinal_ruido_shannon" class="form-label">Sinal-Ruído(dB)</label>
+                <input type="number" class="form-control" id="sinal_ruido_shannon" placeholder="Informe o valor em dB">
+            </div>
+            <div class="" id="result_shannon">
+                <!-- <p id="textResult_shannon">A capacidade máxima de transmissão de dados do canal é X bps</p> -->
+            </div>
+        </div>
+
+        <div class="d-none" id="nyquist">
+            <p>nyquist</p>
+            <div class="">
+                <label for="banda_nyquist" class="form-label">Largura de Banda(Hz)</label>
+                <input type="number" class="form-control" id="banda_nyquist" placeholder="Informe o valor em Hz">
+            </div>
+            <div class="">
+                <label for="modulacao_nyquist" class="form-label">Modulação Multinível</label>
+                <input type="number" class="form-control" id="modulacao_nyquist" placeholder="Informe o valor em dB">
+            </div>
+            <div class="" id="result_nyquist">
+                <!-- <p id="textResult_nyquist">A taxa Nyquist é X bps</p> -->
+            </div>
+        </div>
+
+        <div class="d-none" id="mW_para_dBm">
+            <p>mW_para_dBm</p>
+            <div class="">
+                <label for="valormw_mW_para_dBm" class="form-label">Valor em miliwatts(mW)</label>
+                <input type="number" class="form-control" id="valormw_mW_para_dBm" placeholder="Informe o valor em mW">
+            </div>
+            <div class="" id="result_mW_para_dBm">
+                <!-- <p id="textResult_mW_para_dBm">O valor é equivalente a X decibéis-milliwatts (dBm)</p> -->
+            </div>
+        </div>
+
+        <div class="d-none" id="dBm_para_mW">
+            <p>dBm_para_mW</p>
+            <div class="">
+                <label for="valordbm_dBm_para_mW" class="form-label">Valor em decibéis-milliwatts (dBm)</label>
+                <input type="number" class="form-control" id="valordbm_dBm_para_mW" placeholder="Informe o valor em dBm">
+            </div>
+            <div class="" id="result_dBm_para_mW">
+                <!-- <p id="textResult_dBm_para_mW">O valor é equivalente a X miliwatts(mW)</p> -->
+            </div>
+        </div>
+
+        <div class="d-none" id="eirp">
+            <p>eirp</p>
+            <div class="">
+                <label for="transm_eirp" class="form-label">Potência de Transmissão (dBm)</label>
+                <input type="number" class="form-control" id="transm_eirp" placeholder="Informe o valor em dBm">
+            </div>
+            <div class="">
+                <label for="antena_eirp" class="form-label">Ganho da Antena(dBi)</label>
+                <input type="number" class="form-control" id="antena_eirp" placeholder="Informe o valor em dBi">
+            </div>
+            <div class="">
+                <label for="cabo_eirp" class="form-label">Perdas no Cabo(dB)</label>
+                <input type="number" class="form-control" id="cabo_eirp" placeholder="Informe o valor em dB">
+            </div>
+            <div class="" id="result_eirp">
+                <!-- <p id="textResult_eirp">O valor de EIRP é X dBm</p> -->
+            </div>
+        </div>
+
+        <div class="d-none" id="fslp">
+            <p>fslp</p>
+            <div class="">
+                <label for="distancia_fslp" class="form-label">Distância(Km)</label>
+                <input type="number" class="form-control" id="distancia_fslp" placeholder="Informe o valor em Km">
+            </div>
+            <div class="">
+                <label for="frequencia_fslp" class="form-label">Frequência(MHz)</label>
+                <input type="number" class="form-control" id="frequencia_fslp" placeholder="Informe o valor em MHz">
+            </div>
+            <div class="" id="result_fslp">
+                <!-- <p id="textResult_fslp">O valor de FSLP é X dB</p> -->
+            </div>
+        </div>
+
+        <div class="d-none" id="rsl">
+            <p>rsl</p>
+            <div class="">
+                <label for="transm_rsl" class="form-label">Potência de Transmissão (dBm)</label>
+                <input type="number" class="form-control" id="transm_rsl" placeholder="Informe o valor em dBm">
+            </div>
+            <div class="">
+                <label for="antenaTx_rsl" class="form-label">Ganho da Antena TX(dBi)</label>
+                <input type="number" class="form-control" id="antenaTx_rsl" placeholder="Informe o valor em dBi">
+            </div>
+            <div class="">
+                <label for="caboTx_rsl" class="form-label">Perdas no Cabo TX(dB)</label>
+                <input type="number" class="form-control" id="caboTx_rsl" placeholder="Informe o valor em dB">
+            </div>
+            <div class="">
+                <label for="fslp_rsl" class="form-label">Valor FSLP</label>
+                <input type="number" class="form-control" id="fslp_rsl" placeholder="Informe o valor em dB">
+            </div>
+            <div class="">
+                <label for="antenaRx_rsl" class="form-label">Ganho da Antena RX(dBi)</label>
+                <input type="number" class="form-control" id="antenaRx_rsl" placeholder="Informe o valor em dBi">
+            </div>
+            <div class="">
+                <label for="caboRx_rsl" class="form-label">Perdas no Cabo RX(dB)</label>
+                <input type="number" class="form-control" id="caboRx_rsl" placeholder="Informe o valor em dB">
+            </div>
+            <div class="" id="result_rsl">
+                <!-- <p id="textResult_rsl">O valor de RSL é X dBm</p> -->
+            </div>
+        </div>
+
+        <div class="d-none" id="fresnel">
+            <p>fresnel</p>
+            <div class="">
+                <label for="distanciaTransmObst_fresnel" class="form-label">Distância transmissor e obstáculo(m)</label>
+                <input type="number" class="form-control" id="distanciaTransmObst_fresnel" placeholder="Informe o valor em metros">
+            </div>
+            <div class="">
+                <label for="distanciaRecepObst_fresnel" class="form-label">Distância receptor e obstáculo(m)</label>
+                <input type="number" class="form-control" id="distanciaRecepObst_fresnel" placeholder="Informe o valor em metros">
+            </div>
+            <div class="">
+                <label for="frequencia_fresnel" class="form-label">Frequência(MHz)</label>
+                <input type="number" class="form-control" id="frequencia_fresnel" placeholder="Informe o valor em MHz">
+            </div>
+            <div class="">
+                <label for="distanciaTransmRecep_fresnel" class="form-label">Distância transmissor e receptor</label>
+                <input type="number" class="form-control" id="distanciaTransmRecep_fresnel" placeholder="Informe o valor em metros">
+            </div>
+            <div class="" id="result_fresnel">
+                <!-- <p id="textResult_fresnel">A capacidade máxima de transmissão de dados do canal é X bps</p> -->
+            </div>
+        </div>
+
+        <div>
+            <input type = "submit" id="btn" class="btn btn-sm btn-info" value = "Calcular">
+        </div>
+
+        <div class="d-none" id="result">
+            <p id="textResult"></p>
+        </div>
+    </div>
+
+    <script type="module" src="../js/index.js"></script>
+    <!-- Incluindo o Bootstrap JS (opcional, se necessário para funcionalidades específicas) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+<script>
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const nyquistLink = document.querySelector('.nav-link[href="#nyquist"]');
+        const shannonLink = document.querySelector('.nav-link[href="#shannon"]');
+        const mW_para_dBmLink = document.querySelector('.nav-link[href="#mW_para_dBm"]');
+        const dBm_para_mWLink = document.querySelector('.nav-link[href="#dBm_para_mW"]');
+        const eirpLink = document.querySelector('.nav-link[href="#eirp"]');
+        const fslpLink = document.querySelector('.nav-link[href="#fslp"]');
+        const rslLink = document.querySelector('.nav-link[href="#rsl"]');
+        const fresnelLink = document.querySelector('.nav-link[href="#fresnel"]');
+        const nyquistDiv = document.getElementById('nyquist');
+        const shannonDiv = document.getElementById('shannon');
+        const mW_para_dBmDiv = document.getElementById('mW_para_dBm');
+        const dBm_para_mWDiv = document.getElementById('dBm_para_mW');
+        const eirpDiv = document.getElementById('eirp');
+        const fslpDiv = document.getElementById('fslp');
+        const rslDiv = document.getElementById('rsl');
+        const fresnelDiv = document.getElementById('fresnel');
+        const result = document.getElementById('result');
+
+        nyquistLink.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevenir o comportamento padrão do link
+            limparCampos()
+            nyquistDiv.classList.remove('d-none');
+            shannonDiv.classList.add('d-none');
+            mW_para_dBmDiv.classList.add('d-none');
+            dBm_para_mWDiv.classList.add('d-none');
+            eirpDiv.classList.add('d-none');
+            fslpDiv.classList.add('d-none');
+            rslDiv.classList.add('d-none');
+            fresnelDiv.classList.add('d-none');
+            result.classList.add('d-none');
+        });
+        shannonLink.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevenir o comportamento padrão do link
+            limparCampos()
+            shannonDiv.classList.remove('d-none');
+            nyquistDiv.classList.add('d-none');
+            mW_para_dBmDiv.classList.add('d-none');
+            dBm_para_mWDiv.classList.add('d-none');
+            eirpDiv.classList.add('d-none');
+            fslpDiv.classList.add('d-none');
+            rslDiv.classList.add('d-none');
+            fresnelDiv.classList.add('d-none');
+            result.classList.add('d-none');
+        });
+        mW_para_dBmLink.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevenir o comportamento padrão do link
+            mW_para_dBmDiv.classList.remove('d-none');
+            nyquistDiv.classList.add('d-none');
+            shannonDiv.classList.add('d-none');
+            dBm_para_mWDiv.classList.add('d-none');
+            eirpDiv.classList.add('d-none');
+            fslpDiv.classList.add('d-none');
+            rslDiv.classList.add('d-none');
+            fresnelDiv.classList.add('d-none');
+            result.classList.add('d-none');
+            limparCampos()
+        });
+        dBm_para_mWLink.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevenir o comportamento padrão do link
+            dBm_para_mWDiv.classList.remove('d-none');
+            nyquistDiv.classList.add('d-none');
+            shannonDiv.classList.add('d-none');
+            mW_para_dBmDiv.classList.add('d-none');
+            eirpDiv.classList.add('d-none');
+            fslpDiv.classList.add('d-none');
+            rslDiv.classList.add('d-none');
+            fresnelDiv.classList.add('d-none');
+            result.classList.add('d-none');
+            limparCampos()
+        });
+        eirpLink.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevenir o comportamento padrão do link
+            eirpDiv.classList.remove('d-none');
+            nyquistDiv.classList.add('d-none');
+            shannonDiv.classList.add('d-none');
+            mW_para_dBmDiv.classList.add('d-none');
+            dBm_para_mWDiv.classList.add('d-none');
+            fslpDiv.classList.add('d-none');
+            rslDiv.classList.add('d-none');
+            fresnelDiv.classList.add('d-none');
+            result.classList.add('d-none');
+            limparCampos()
+        });
+        fslpLink.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevenir o comportamento padrão do link
+            fslpDiv.classList.remove('d-none');
+            nyquistDiv.classList.add('d-none');
+            shannonDiv.classList.add('d-none');
+            mW_para_dBmDiv.classList.add('d-none');
+            dBm_para_mWDiv.classList.add('d-none');
+            eirpDiv.classList.add('d-none');
+            rslDiv.classList.add('d-none');
+            fresnelDiv.classList.add('d-none');
+            result.classList.add('d-none');
+            limparCampos()
+        });
+        rslLink.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevenir o comportamento padrão do link
+            rslDiv.classList.remove('d-none');
+            nyquistDiv.classList.add('d-none');
+            shannonDiv.classList.add('d-none');
+            mW_para_dBmDiv.classList.add('d-none');
+            dBm_para_mWDiv.classList.add('d-none');
+            eirpDiv.classList.add('d-none');
+            fslpDiv.classList.add('d-none');
+            fresnelDiv.classList.add('d-none');
+            result.classList.add('d-none');
+            limparCampos()
+        });
+        fresnelLink.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevenir o comportamento padrão do link
+            fresnelDiv.classList.remove('d-none');
+            nyquistDiv.classList.add('d-none');
+            shannonDiv.classList.add('d-none');
+            mW_para_dBmDiv.classList.add('d-none');
+            dBm_para_mWDiv.classList.add('d-none');
+            eirpDiv.classList.add('d-none');
+            fslpDiv.classList.add('d-none');
+            rslDiv.classList.add('d-none');
+            result.classList.add('d-none');
+            limparCampos()
+        });
+    });
+
+    function limparCampos() {
+        const div = document.getElementById("page");
+        // Verifica se a div foi encontrada
+        if (div) {
+            // Encontra todos os elementos de entrada dentro da div
+            const inputs = div.querySelectorAll('input');
+
+            // Loop através dos inputs e redefine seus valores para vazio
+            inputs.forEach(function(input) {
+                if (input.type !== 'submit') {
+                input.value = '';
+            }
+            });
+        }
+    }
+</script>
+
