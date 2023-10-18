@@ -34,7 +34,7 @@ function chamaFuncao() {
   }
   if(banda_nyquist != "" && modulacao_nyquist != ""){
     let nyquistResult = nyquist(banda_nyquist, modulacao_nyquist);
-    result.innerHTML = "A taxa Nyquist é X " + nyquistResult+ " bps"
+    result.innerHTML = "A taxa Nyquist é " + nyquistResult+ " bps"
     result.classList.remove("d-none");
   }
   if(valormw_mW_para_dBm != ""){
@@ -64,7 +64,7 @@ function chamaFuncao() {
   }
   if(distanciaTransmObst_fresnel != "" && distanciaRecepObst_fresnel != "" && frequencia_fresnel != "" && distanciaTransmRecep_fresnel != ""){
     let fresnelResult = fresnel(distanciaTransmObst_fresnel, distanciaRecepObst_fresnel, frequencia_fresnel, distanciaTransmRecep_fresnel);
-    result.innerHTML = "O valor de Fresnel é  "+ fresnelResult
+    result.innerHTML = "O valor de Fresnel é  "+ fresnelResult + "metros"
     result.classList.remove("d-none");
   }
   

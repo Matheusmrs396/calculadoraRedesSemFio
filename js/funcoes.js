@@ -30,5 +30,5 @@ function rsl(transmissao, antenaTx, caboTx, fslp, antenaRx, caboRx){
 }
 
 function fresnel(distanciaTransmissorObstaculo, distanciaReceptorObstaculo, frequencia, distanciaTransmissorReceptor){
-    return 550 * Math.sqrt((distanciaTransmissorObstaculo * distanciaReceptorObstaculo) / (distanciaTransmissorReceptor - frequencia))
+    return 550 * Math.sqrt((parseFloat(distanciaTransmissorObstaculo) * parseFloat(distanciaReceptorObstaculo)) / (parseFloat(distanciaTransmissorReceptor) * parseFloat(frequencia)))
 }
